@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width">
+    <title>卫星和路网</title>
+    <style>
+        html, body, #container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.11&key=0c517687553d0300c75a874223febb11"></script>
+<script>
+    var map = new AMap.Map('container', {
+        center: [116.397428, 39.90923],
+        layers: [
+            // 卫星
+            new AMap.TileLayer.Satellite(),
+            // 路网
+            new AMap.TileLayer.RoadNet()
+        ],
+        zoom: 11
+    });
+</script>
+</body>
+
+
+</html>
